@@ -19,11 +19,24 @@
 		</developer>
 	</developers>
 
+	<repositories>
+		<repository>
+			<id>osgeo</id>
+			<name>Open Source Geospatial Foundation Repository</name>
+			<url>https://repo.osgeo.org/repository/release/</url>
+		</repository>
+	</repositories>
+
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<lombok.version>1.18.24</lombok.version>
+		<jts.version>1.18.2</jts.version>
+		<jackson.version>2.13.2.2</jackson.version>
+		<opencsv.version>5.6</opencsv.version>
+		<openfeign.version>11.8</openfeign.version>
+		<hutool.version>5.7.22</hutool.version>
 		<junit5.version>5.8.2</junit5.version>
 	</properties>
 
@@ -35,14 +48,34 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.locationtech.jts</groupId>
+			<artifactId>jts-core</artifactId>
+			<version>${jts.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
-			<version>5.6</version>
+			<version>${opencsv.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-core</artifactId>
-			<version>5.7.22</version>
+			<version>${hutool.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-core</artifactId>
+			<version>${openfeign.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.n52.jackson</groupId>
+			<artifactId>jackson-datatype-jts</artifactId>
+			<version>1.2.10</version>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
