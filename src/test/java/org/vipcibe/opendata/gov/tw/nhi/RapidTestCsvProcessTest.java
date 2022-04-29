@@ -41,6 +41,7 @@ public class RapidTestCsvProcessTest {
 	private final static Path root = Paths.get( "src/test/resources" );
 	private final static Path rapidTestCsvPath = root.resolve( "raw/A21030000I-D03001-001.csv" );
 	private final static Path rapidTestJsonPath = root.resolve( "json/nhi/rapidTestStock.json" );
+	private final static Path resultJsonPath = root.resolve( "../../../docs/rapidTestStock.json" );
 
 	@BeforeAll
 	public static void setUp(){
@@ -111,6 +112,14 @@ public class RapidTestCsvProcessTest {
 					.features( features )
 					.build();
 			FileUtil.writeString( objectMapper.writeValueAsString( collection ), rapidTestJsonPath.toFile(), StandardCharsets.UTF_8 );
+		}
+	}
+
+	@Test
+	@Order( 3 )
+	public void moveJSON(){
+		if ( PathUtil.exists( rapidTestJsonPath, false ) ){
+			PathUtil.move( rapidTestJsonPath, resultJsonPath, true );
 		}
 	}
 }
