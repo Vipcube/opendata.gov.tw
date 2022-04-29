@@ -23,8 +23,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.CopyOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -119,7 +121,7 @@ public class RapidTestCsvProcessTest {
 	@Order( 3 )
 	public void moveJSON(){
 		if ( PathUtil.exists( rapidTestJsonPath, false ) ){
-			PathUtil.move( rapidTestJsonPath, resultJsonPath, true );
+			PathUtil.copy( rapidTestJsonPath, resultJsonPath, StandardCopyOption.REPLACE_EXISTING );
 		}
 	}
 }
