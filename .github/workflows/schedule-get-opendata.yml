@@ -3,6 +3,7 @@ name: Schedule-Get-OpenData
 on:
   schedule: # execute every hour
     - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 jobs:
   craw-opendata:
