@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @TestMethodOrder( MethodOrderer.OrderAnnotation.class )
-public class RapidTestCsvProcess {
+public class RapidTestCsvProcessTest {
 	private static HttpClient httpClient;
 	private static GeometryFactory geometryFactory;
 	private static ObjectMapper objectMapper;
