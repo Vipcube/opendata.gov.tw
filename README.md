@@ -12,6 +12,10 @@
 
 ### 健康保險
 
-| 資料集 | 處理成果 |
-| -------- | -------- |
-| [健保特約機構防疫家用快篩剩餘數量明細](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=698)  | [JSON](./src/test/resources/json/nhi/rapidTestStock.json) |
+| 資料集 | 原始資料 | 處理成果 |
+| -------- | -------- | -------- |
+| [健保特約機構防疫家用快篩剩餘數量明細](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=698)  | [CSV](./src/test/resources/raw/A21030000I-D03001-001.csv) | [JSON](./src/test/resources/json/nhi/rapidTestStock.json) |
+
+## 系統排程
+
+`每小時 55 分`觸發 `Github Actions` 進行資料蒐集及產出。
