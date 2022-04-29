@@ -1,0 +1,30 @@
+name: Schedule-Get-OpenData
+
+on:
+  schedule: # execute every hour
+    - cron: "0 * * * *"
+
+jobs:
+  craw-opendata:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ 11 ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: ${{ matrix.java }}
+
+      - name: Build with Maven run test
+        run: mvn -B package --file pom.xml
+
+      - name: Git commit and push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: automated generate data
