@@ -2,7 +2,7 @@ name: Schedule-Get-OpenData
 
 on:
   schedule: # execute every hour
-    - cron: "0 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   craw-opendata:
