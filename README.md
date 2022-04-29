@@ -16,7 +16,7 @@
 
 | 資料集 | 原始資料 | 處理成果 |
 | -------- | -------- | -------- |
-| [健保特約機構防疫家用快篩剩餘數量明細](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=698)  | [CSV](./src/test/resources/raw/A21030000I-D03001-001.csv) | [JSON](./src/test/resources/json/nhi/rapidTestStock.json) |
+| [健保特約機構防疫家用快篩剩餘數量明細](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=698)  | [CSV](./src/test/resources/raw/A21030000I-D03001-001.csv) | [JSON](https://vipcube.github.io/opendata.gov.tw/rapidTestStock.json) |
 
 ## 系統排程
 
