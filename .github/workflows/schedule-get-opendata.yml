@@ -8,9 +8,13 @@ on:
 jobs:
   craw-opendata:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         java: [ 11 ]
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
