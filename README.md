@@ -1,5 +1,7 @@
 # 臺灣政府開放資料
 
+[![Schedule-Get-OpenData](https://github.com/Vipcube/opendata.gov.tw/actions/workflows/schedule-get-opendata.yml/badge.svg)](https://github.com/Vipcube/opendata.gov.tw/actions/workflows/schedule-get-opendata.yml)
+
 此專案透過以下技術，從臺灣政府開放資料程式抓取並處理成後續應用成果。
 
 ## 使用技術語言
