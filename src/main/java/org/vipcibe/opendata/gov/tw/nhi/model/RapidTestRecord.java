@@ -15,4 +15,5 @@ public class RapidTestRecord {
 	private String label;
 	private int inStock;
 	private String updateTime;
+	private String remark;
 }

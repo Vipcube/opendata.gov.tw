@@ -92,6 +92,7 @@ public class RapidTestCsvProcessTest {
 							.label( splits[6] )
 							.inStock( Integer.parseInt( splits[7] ) )
 							.updateTime( splits[8] )
+							.remark( splits[9] )
 							.build() )
 					.collect( Collectors.toList());
 
@@ -104,7 +105,8 @@ public class RapidTestCsvProcessTest {
 									"phone", record.getPhone(),
 									"label", record.getLabel(),
 									"stock", record.getInStock(),
-									"updateTime", record.getUpdateTime()
+									"updateTime", record.getUpdateTime(),
+									"remark", record.getRemark()
 							) )
 							.geometry( geometryFactory.createPoint( new Coordinate( record.getLon(), record.getLat() ) ) )
 							.build() )
