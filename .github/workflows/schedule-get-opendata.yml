@@ -1,8 +1,8 @@
 name: Schedule-Get-OpenData
 
 on:
-  schedule: # execute every hour
-    - cron: "0 */2 * * *"
+#   schedule: # execute every hour
+#     - cron: "0 */2 * * *"
   workflow_dispatch:
 
 jobs:
